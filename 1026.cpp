@@ -10,14 +10,17 @@
 #include<cstdio>
 #include<cstring>
 #include<algorithm>
+
 using namespace std;
 typedef long long ll;
+
 int n,m;
 ll dp[20][12][2];
 int nums[20];
 int tots=0;
 int orz[22];
 int top=0;
+
 ll DP(int pos,int limit,int num,int m){
     if(pos==0){
             return 1;
@@ -39,6 +42,7 @@ ll DP(int pos,int limit,int num,int m){
     }
     return sum;
 }
+
 ll sol(ll x){
     int tot=0;
     top=0;
@@ -49,6 +53,7 @@ ll sol(ll x){
     }
     return DP(tot,1,-2,0);
 }
+
 int main() {
     ll a,b;
     cin>>a>>b;
